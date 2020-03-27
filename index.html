@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Support Stats</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="vendors/css/app.min.css">
+        <link rel="stylesheet" href="vendors/css/grid.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+    </head>
+
+    <body>
+        <!-- BEGIN HOME PAGE -->
+        <div class="app-page" data-page="home">
+            <div class="app-topbar">
+                <div class="app-title">
+                    <ul class="top-bar-display-items">
+                        <li>
+                            <div class="app-button top-bar-button" data-target="active-cases">
+                                <span class="top-bar-item-desc">Total Active Cases: </span>
+                                <span id="total-active-cases">100</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="app-button top-bar-button" data-target="queued-cases">
+                                <span class="top-bar-item-desc">Total Queued Cases: </span>
+                                <span id="total-Queued-cases">100</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="app-button top-bar-button" data-target="todays-solved-cases">
+                                <span class="top-bar-item-desc">Today's Solved Cases: </span>
+                                <span id="todays-solved-cases">100</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="app-button top-bar-button" data-target="todays-created-cases">
+                                <span class="top-bar-item-desc">Today's Created Cases: </span>
+                                <span id="todays-created-cases">100</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="app-content">
+                <div class="app-section" >
+                    <div class="row chart-row reduced-width">    
+                        <div class="col span-1-of-2">
+                            <h3>Active Cases</h3>
+                            <canvas id="active-over-time"></canvas>
+                        </div>
+                        <div class="col span-1-of-2">
+                            <h3>Answer Time</h3>
+                            <canvas id="answer-time-chart"></canvas>
+                        </div>
+                    <div class="row chart-row reduced-width">    
+                        <div class="col span-1-of-2">
+                            <h3>Queued Cases</h3>
+                            <canvas id="queued-cases-chart"></canvas>
+                        </div>
+                        <div class="col span-1-of-2">
+                            <h3>Solved Cases</h3>
+                            <canvas id="solved-cases-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="row chart-row reduced-width">
+                        <div class="col span-1-of-2">
+                            <h3>Active Cases By Rep</h3>
+                            <canvas id="active-cases-chart"></canvas>
+                        </div>
+                        <div class="col span-1-of-2">
+                            <h3>Created/Closed By Rep</h3>
+                            <canvas id="cases-by-rep-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- BEGIN ACTIVE CASES PAGE -->
+        <div class="app-page" data-page="active-cases">
+            <div class="app-topbar">
+                <div class="app-button left" data-back data-autotitle></div>
+                <div class="app-title">Active Cases</div>
+            </div>
+            <div class="app-content">
+                <div class="app-section">
+                    <div class="row reduced-width">
+                        <div class="col span-1-of-4">
+                            <h3>Active Cases By Type</h3>
+                            <canvas id="active-by-type"></canvas>
+                        </div>
+                        <div class="col span-1-of-4">
+                            <h3>Active Cases By Status</h3>
+                            <canvas id="active-by-status"></canvas>
+                        </div>
+                        <div class="col span-1-of-4">
+                            <h3>Active Cases By Support Rep</h3>
+                            <canvas id="active-by-support-rep"></canvas>
+                        </div>
+                        <div class="col span-1-of-4">
+                            <h3>Active Cases By Escalated Rep</h3>
+                            <canvas id="active-by-escalated-rep"></canvas>
+                        </div>
+                    </div>
+                    <div class="row reduced-width">
+                        <div class="col span-1-of-4">
+                            <h2>Active Cases By Solutions Architect</h2>
+                            <canvas id="active-by-sa"></canvas>
+                        </div>
+                        <div class="col span-1-of-4">
+                            <h2>Active Cases By ??? </h2>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN QUEUED CASES PAGE -->
+        <div class="app-page" data-page="queued-cases">
+            <div class="app-topbar">
+                <div class="app-button left" data-back data-autotitle></div>
+                <div class="app-title">queued-cases</div>
+            </div>
+            <div class="app-content">
+                Page 2 is lonely
+            </div>
+        </div>
+        <!-- BEGIN TODAYS SOLVED CASES PAGE -->
+        <div class="app-page" data-page="todays-solved-cases">
+            <div class="app-topbar">
+                <div class="app-button left" data-back data-autotitle></div>
+                <div class="app-title">todays-solved-cases</div>
+            </div>
+            <div class="app-content">
+                Page 2 is lonely
+            </div>
+        </div>
+        <!-- BEGIN TODAYS CREATED CASES PAGE -->
+        <div class="app-page" data-page="todays-created-cases">
+            <div class="app-topbar">
+                <div class="app-button left" data-back data-autotitle></div>
+                <div class="app-title">todays-created-cases</div>
+            </div>
+            <div class="app-content">
+                Page 2 is lonely
+            </div>
+        </div>
+        
+
+        <script src="vendors/js/zepto.js"></script>
+        <script src="vendors/js/app.min.js"></script>
+        <script src="vendors/js/Chart.min.js"></script>
+        <script src="vendors/js/utils.js"></script>
+        <script src="resources/js/script.js"></script>    
+    </body>
+</html>
